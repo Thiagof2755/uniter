@@ -81,7 +81,7 @@ const Navbar = ({ user, setUser }) => {
           <div className="dropdown-user-info">
             <h3>{user.name}</h3>
             <p className="user-course">Bacharel em Direito</p>
-            <p className="user-id">Mat: {user.username}</p>
+            <p className="user-id">Mat: {user.matricula}</p>
           </div>
         </div>
 

@@ -159,8 +159,9 @@ const StudentCard = ({ user, setUser }) => {
               <div class="info-section">
                 <h2 class="student-name">${user.name}</h2>
                 <p class="student-course">Bacharel em Direito</p>
-                <p class="student-id">Mat: ${user.username}</p>
+                <p class="student-id">Mat: ${user.matricula}</p>
                 <p class="student-id">CPF: ${user.cpf}</p>
+                <p class="student-nascimento">data de Nascimento: ${user.dataNascimento}</p>
               </div>
             </div>
             <div class="barcode"></div>
@@ -224,10 +225,11 @@ const StudentCard = ({ user, setUser }) => {
               </div>
               
               <div className="info-section">
-                <h2 className="student-name">{user.name}</h2>
+                <h2 className="student-name">{user.username}</h2>
                 <p className="student-course">Bacharel em Direito</p>
-                <p className="student-id">Mat: {user.username}</p>
+                <p className="student-id">Matricula: {user.matricula}</p>
                 <p className="student-id">CPF: {user.cpf}</p>
+                <p className="student-id">Data de Nascimento: {user.dataNascimento}</p>
                 <p className="student-semester">Semestre: 2026.1</p>
               </div>
             </div>
