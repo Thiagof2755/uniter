@@ -1,3 +1,36 @@
+  .qr-code-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .card-back .qr-code-container svg {
+    width: 72px !important;
+    height: 72px !important;
+    max-width: 100%;
+    max-height: 100%;
+    aspect-ratio: 1/1;
+    display: block;
+    margin: 0 auto;
+  }
+@media (max-width: 480px) {
+  .card-back .qr-code-container svg {
+    width: 56px !important;
+    height: 56px !important;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .qr-code-container {
+    margin: 0;
+  }
+}
 .student-card-container {
   min-height: 100vh;
   background: #ffffff;
@@ -41,7 +74,7 @@
 
 .student-card {
   width: 420px;
-  height: 350px;
+  height: 260px;
   background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
   border-radius: 15px;
   position: relative;
@@ -100,11 +133,13 @@
   border-radius: 8px;
   object-fit: cover;
   background: #f0f0f0;
+  padding: 2px;
 }
 
 .info-section {
   flex: 1;
   color: white;
+  padding: 8px 12px;
 }
 
 .student-name {
@@ -179,12 +214,143 @@
 }
 
 .back-content {
-  padding: 15px;
+  padding: 20px;
   height: calc(100% - 44px);
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0;
 }
+
+.back-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 8px 20px 8px 8px;
+  border-right: 2px solid #e2e8f0;
+}
+
+.back-info p {
+  margin: 8px 0;
+  font-size: 12px;
+  color: #2d3748;
+  line-height: 1.4;
+}
+
+.back-footer {
+  margin-top: auto;
+  padding-top: 15px;
+}
+
+.back-footer p {
+  margin: 0;
+  font-size: 11px;
+  color: #718096;
+  text-align: center;
+}
+
+.qr-code-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 8px 8px 20px;
+}
+
+.qr-code-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.qr-code-label {
+  font-size: 10px;
+  color: #718096;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.card-back .qr-code-container svg {
+  width: 120px !important;
+  height: 120px !important;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+/* Mobile responsive para carteirinha */
+@media (max-width: 768px) {
+  .card-back {
+    transform: none;
+    width: 95vw;
+    max-width: 300px;
+    height: 190px;
+  }
+  
+  .back-content {
+    padding: 12px;
+  }
+  
+  .back-info {
+    padding-right: 12px;
+  }
+  
+  .qr-code-side {
+    padding-left: 12px;
+  }
+  
+  .card-back .qr-code-container svg {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  
+  .qr-code-label {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-back {
+    width: 98vw;
+    max-width: 260px;
+    height: 150px;
+  }
+  
+  .back-content {
+    padding: 6px;
+    flex-direction: row;
+  }
+  
+  .back-info {
+    padding-right: 8px;
+    border-right: 1px solid #e2e8f0;
+  }
+  
+  .back-info p {
+    font-size: 9px;
+    margin: 3px 0;
+  }
+  
+  .back-footer p {
+    font-size: 8px;
+  }
+  
+  .qr-code-side {
+    padding-left: 8px;
+  }
+  
+  .card-back .qr-code-container svg {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  
+  .qr-code-label {
+    font-size: 8px;
+  }
+}
+
 
 .back-info {
   margin-bottom: 15px;
@@ -303,9 +469,11 @@
   
   .student-card,
   .card-back {
-    transform: scale(1);
-    width: 300px;
+    transform: none;
+    width: 95vw;
+    max-width: 300px;
     height: 190px;
+    min-width: 0;
   }
   
   .card-content {
@@ -323,13 +491,13 @@
   }
   
   .student-name {
-    font-size: 14px;
+    font-size: 16px;
   }
   
   .student-course,
   .student-id,
   .student-semester {
-    font-size: 10px;
+    font-size: 12px;
   }
   
   .back-content {
@@ -345,42 +513,51 @@
 @media (max-width: 480px) {
   .student-card,
   .card-back {
-    width: 280px;
-    height: 175px;
+    width: 96vw;
+    max-width: 420px;
+    height: 210px;
+    min-width: 0;
+    margin: 2vw auto;
+    transform: none;
   }
-  
   .card-content {
-    padding: 10px 12px;
+    padding: 6px 6px;
   }
-  
   .student-photo {
-    width: 50px;
-    height: 65px;
+    width: 52px;
+    height: 66px;
   }
-  
   .photo-section {
-    width: 50px;
+    width: 52px;
     margin-right: 10px;
   }
-  
   .student-name {
-    font-size: 13px;
+    font-size: 14px;
   }
-  
   .student-course,
   .student-id,
   .student-semester {
-    font-size: 9px;
+    font-size: 10px;
   }
-  
   .valid-until,
   .barcode {
-    bottom: 10px;
+    bottom: 6px;
   }
-  
   .barcode {
-    width: 60px;
-    height: 10px;
+    width: 40px;
+    height: 7px;
+  }
+  .card-header {
+    padding: 6px 8px;
+  }
+  .university-name {
+    font-size: 14px;
+  }
+  .card-type {
+    font-size: 12px;
+  }
+  .back-content {
+    padding: 6px;
   }
 }
 

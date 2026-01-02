@@ -1,4 +1,5 @@
 import React from 'react';
+import { QRCodeSVG } from 'qrcode.react';
 import { useNavigate } from 'react-router-dom';
 import './StudentCard.css';
 
@@ -248,9 +249,21 @@ const StudentCard = ({ user, setUser }) => {
                 <p><strong>Modalidade:</strong> Presencial</p>
                 <p><strong>Período:</strong> Noturno</p>
                 <p><strong>Status:</strong> Ativo</p>
+                <div className="back-footer">
+                  <p>www.uniter.edu.br</p>
+                </div>
               </div>
-              <div className="back-footer">
-                <p>www.uniter.edu.br</p>
+              <div className="qr-code-side">
+                <div className="qr-code-container">
+                  <QRCodeSVG 
+                    value="VALIDACAO FAKE" 
+                    size={120} 
+                    bgColor="#ffffff" 
+                    fgColor="#2d3748" 
+                    includeMargin={false}
+                  />
+                </div>
+                <div className="qr-code-label">Código de Validação</div>
               </div>
             </div>
           </div>
