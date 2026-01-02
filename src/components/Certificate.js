@@ -327,6 +327,10 @@ const Certificate = ({ user, setUser }) => {
                   <span class="value">${user.matricula || user.username}</span>
                 </div>
                 <div class="info-item">
+                  <span class="label">Data de Nascimento:</span>
+                  <span class="value">${user.dataNascimento || 'N/A'}</span>
+                </div>
+                <div class="info-item">
                   <span class="label">Curso:</span>
                   <span class="value">Bacharel em Direito</span>
                 </div>
@@ -499,6 +503,11 @@ const Certificate = ({ user, setUser }) => {
                 <div className="info-item">
                   <span className="label">Matrícula:</span>
                   <span className="value">{user.matricula || user.username}</span>
+                </div>
+                
+                <div className="info-item">
+                  <span className="label">Data de Nascimento:</span>
+                  <span className="value">{user.dataNascimento || 'N/A'}</span>
                 </div>
                 
                 <div className="info-item">

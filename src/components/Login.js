@@ -13,18 +13,20 @@ const Login = ({ setUser }) => {
   const users = {
     'vitoria.ribeiro': { 
       password: '123', 
-      name: 'Vitória Ribeiro', 
+      name: 'VITORIA RIBEIRO ROSA', 
       progress: 60, 
       cpf: '127.848.436-10',
       matricula: '600920393',
+      dataNascimento: '15/09/2002',
       photo: vitoriaPhoto
     },
     'thiago.alves': { 
       password: '123', 
-      name: 'Thiago Alves', 
+      name: 'THIAGO ALVES DA SILVA FILHO', 
       progress: 75, 
       cpf: '168.887.556-57',
       matricula: '500815757',
+      dataNascimento: '01/01/2003',
       photo: thiagoPhoto
     }
   };
@@ -40,6 +42,7 @@ const Login = ({ setUser }) => {
         progress: users[username].progress,
         cpf: users[username].cpf,
         matricula: users[username].matricula,
+        dataNascimento: users[username].dataNascimento,
         photo: users[username].photo
       });
     } else {
