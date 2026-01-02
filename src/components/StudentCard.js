@@ -225,7 +225,7 @@ const StudentCard = ({ user, setUser }) => {
               </div>
               
               <div className="info-section">
-                <h2 className="student-name">{user.username}</h2>
+                <h2 className="student-name">{user.name}</h2>
                 <p className="student-course">Bacharel em Direito</p>
                 <p className="student-id">Matricula: {user.matricula}</p>
                 <p className="student-id">CPF: {user.cpf}</p>
