@@ -324,7 +324,7 @@ const Certificate = ({ user, setUser }) => {
                 </div>
                 <div class="info-item">
                   <span class="label">Matrícula:</span>
-                  <span class="value">${user.username}</span>
+                  <span class="value">${user.matricula || user.username}</span>
                 </div>
                 <div class="info-item">
                   <span class="label">Curso:</span>
@@ -498,7 +498,7 @@ const Certificate = ({ user, setUser }) => {
                 
                 <div className="info-item">
                   <span className="label">Matrícula:</span>
-                  <span className="value">{user.username}</span>
+                  <span className="value">{user.matricula || user.username}</span>
                 </div>
                 
                 <div className="info-item">

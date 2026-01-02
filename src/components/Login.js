@@ -16,6 +16,7 @@ const Login = ({ setUser }) => {
       name: 'Vitória Ribeiro', 
       progress: 60, 
       cpf: '127.848.436-10',
+      matricula: '600920393',
       photo: vitoriaPhoto
     },
     'thiago.alves': { 
@@ -23,6 +24,7 @@ const Login = ({ setUser }) => {
       name: 'Thiago Alves', 
       progress: 75, 
       cpf: '168.887.556-57',
+      matricula: '500815757',
       photo: thiagoPhoto
     }
   };
@@ -37,6 +39,7 @@ const Login = ({ setUser }) => {
         name: users[username].name,
         progress: users[username].progress,
         cpf: users[username].cpf,
+        matricula: users[username].matricula,
         photo: users[username].photo
       });
     } else {
