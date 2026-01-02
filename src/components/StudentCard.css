@@ -1,0 +1,410 @@
+.student-card-container {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.card-actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.action-btn {
+  padding: 12px 24px;
+  border: 2px solid #2d3748;
+  border-radius: 0;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  color: #2d3748;
+}
+
+.action-btn:hover {
+  background: #2d3748;
+  color: white;
+}
+
+.card-preview {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.student-card {
+  width: 420px;
+  height: 260px;
+  background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transform: scale(1.3);
+}
+
+.card-decoration {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 100px;
+  height: 100px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+}
+
+.card-header {
+  background: rgba(255,255,255,0.1);
+  padding: 12px 20px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.university-name {
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.card-type {
+  color: rgba(255,255,255,0.9);
+  font-size: 10px;
+  margin: 2px 0 0 0;
+  text-transform: uppercase;
+}
+
+.card-content {
+  display: flex;
+  padding: 15px 20px;
+  height: calc(100% - 60px);
+}
+
+.photo-section {
+  width: 85px;
+  margin-right: 18px;
+}
+
+.student-photo {
+  width: 85px;
+  height: 110px;
+  border: 2px solid white;
+  border-radius: 8px;
+  object-fit: cover;
+  background: #f0f0f0;
+}
+
+.info-section {
+  flex: 1;
+  color: white;
+}
+
+.student-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  line-height: 1.2;
+}
+
+.student-course {
+  font-size: 14px;
+  margin: 0 0 8px 0;
+  opacity: 0.9;
+}
+
+.student-id,
+.student-semester {
+  font-size: 11px;
+  margin: 0 0 4px 0;
+  opacity: 0.8;
+  font-family: 'Courier New', monospace;
+}
+
+.valid-until {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  color: rgba(255,255,255,0.8);
+  font-size: 10px;
+}
+
+.barcode {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  width: 80px;
+  height: 12px;
+  background: repeating-linear-gradient(
+    90deg,
+    white 0px,
+    white 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  opacity: 0.8;
+}
+
+.card-back {
+  width: 420px;
+  height: 260px;
+  background: #f8f9fa;
+  border: 2px solid #e2e8f0;
+  border-radius: 15px;
+  padding: 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transform: scale(1.3);
+}
+
+.back-header {
+  background: #2d3748;
+  color: white;
+  padding: 8px 15px;
+  text-align: center;
+  border-radius: 13px 13px 0 0;
+}
+
+.back-header h3 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.back-content {
+  padding: 15px;
+  height: calc(100% - 44px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.back-info {
+  margin-bottom: 15px;
+}
+
+.back-info p {
+  margin: 6px 0;
+  font-size: 11px;
+  color: #2d3748;
+}
+
+.back-rules {
+  margin-bottom: 15px;
+}
+
+.back-rules h4 {
+  margin: 0 0 8px 0;
+  font-size: 11px;
+  color: #2d3748;
+  font-weight: 700;
+}
+
+.back-rules ul {
+  margin: 0;
+  padding-left: 15px;
+  list-style: none;
+}
+
+.back-rules li {
+  margin: 4px 0;
+  font-size: 9px;
+  color: #4a5568;
+  position: relative;
+}
+
+.back-rules li::before {
+  content: '•';
+  position: absolute;
+  left: -10px;
+  color: #2d3748;
+}
+
+.back-footer {
+  text-align: center;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 8px;
+}
+
+.back-footer p {
+  margin: 2px 0;
+  font-size: 9px;
+  color: #718096;
+}
+
+.important-note {
+  background: white;
+  padding: 25px;
+  border: 1px solid #e2e8f0;
+  margin-top: 30px;
+  border-left: 4px solid #4a5568;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.important-note h4 {
+  color: #2d3748;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.important-note ul {
+  list-style: none;
+  padding: 0;
+}
+
+.important-note li {
+  padding: 8px 0;
+  color: #4a5568;
+  position: relative;
+  padding-left: 20px;
+  font-weight: 500;
+}
+
+.important-note li::before {
+  content: '•';
+  color: #4a5568;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+  
+  .card-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .action-btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+  
+  .card-preview {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .student-card,
+  .card-back {
+    transform: scale(1);
+    width: 300px;
+    height: 190px;
+  }
+  
+  .card-content {
+    padding: 12px 15px;
+  }
+  
+  .student-photo {
+    width: 60px;
+    height: 75px;
+  }
+  
+  .photo-section {
+    width: 60px;
+    margin-right: 12px;
+  }
+  
+  .student-name {
+    font-size: 14px;
+  }
+  
+  .student-course,
+  .student-id,
+  .student-semester {
+    font-size: 10px;
+  }
+  
+  .back-content {
+    padding: 12px;
+  }
+  
+  .important-note {
+    padding: 20px 15px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .student-card,
+  .card-back {
+    width: 280px;
+    height: 175px;
+  }
+  
+  .card-content {
+    padding: 10px 12px;
+  }
+  
+  .student-photo {
+    width: 50px;
+    height: 65px;
+  }
+  
+  .photo-section {
+    width: 50px;
+    margin-right: 10px;
+  }
+  
+  .student-name {
+    font-size: 13px;
+  }
+  
+  .student-course,
+  .student-id,
+  .student-semester {
+    font-size: 9px;
+  }
+  
+  .valid-until,
+  .barcode {
+    bottom: 10px;
+  }
+  
+  .barcode {
+    width: 60px;
+    height: 10px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .student-card-container {
+    background: white !important;
+  }
+  
+  .card-preview {
+    margin: 0;
+  }
+  
+  .student-card {
+    transform: none;
+    margin: 0;
+  }
+  
+  .card-back {
+    transform: none;
+    margin: 20px 0 0 0;
+  }
+}
