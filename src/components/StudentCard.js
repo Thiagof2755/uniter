@@ -256,7 +256,7 @@ const StudentCard = ({ user, setUser }) => {
               <div className="qr-code-side">
                 <div className="qr-code-container">
                   <QRCodeSVG 
-                    value="VALIDACAO FAKE" 
+                    value="https://uniter-liart.vercel.app/certificate" 
                     size={120} 
                     bgColor="#ffffff" 
                     fgColor="#2d3748" 
